@@ -32,7 +32,7 @@ test('theme init is not deferred or async', () => {
 
 test('theme init falls back to the OS preference when nothing is stored', () => {
   assert.match(initJs, /prefers-color-scheme/);
-  assert.match(initJs, /trainchat-theme/);
+  assert.match(initJs, /traintalk-theme/);
 });
 
 test('theme init tolerates blocked sessionStorage', () => {

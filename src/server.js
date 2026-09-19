@@ -10,8 +10,8 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const PUBLIC_DIR = join(__dirname, '..', 'public');
 
 const ALLOWED_ORIGINS = new Set([
-  'https://trainchat.fly.dev',
-  'https://trainchat.app',
+  'https://traintalk.fly.dev',
+  'https://traintalk.app',
   'http://localhost:3000',
 ]);
 
@@ -39,7 +39,7 @@ const CSP = [
   "default-src 'self'",
   "script-src 'self'",
   "style-src 'self'",
-  "connect-src 'self' wss://trainchat.fly.dev wss://trainchat.app",
+  "connect-src 'self' wss://traintalk.fly.dev wss://traintalk.app",
   "frame-ancestors 'none'",
   "form-action 'none'",
   "base-uri 'none'",
@@ -309,6 +309,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const PORT = process.env.PORT ?? 3000;
   const { httpServer } = createServer();
   httpServer.listen(PORT, () => {
-    console.log(`TrainChat running on http://localhost:${PORT}`);
+    console.log(`TrainTalk running on http://localhost:${PORT}`);
   });
 }

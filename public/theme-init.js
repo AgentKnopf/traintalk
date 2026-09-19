@@ -3,7 +3,7 @@
 // than inline because the server sends a strict `script-src 'self'` CSP.
 (function () {
   var t;
-  try { t = sessionStorage.getItem('trainchat-theme'); } catch (e) { /* storage blocked */ }
+  try { t = sessionStorage.getItem('traintalk-theme'); } catch (e) { /* storage blocked */ }
   if (t !== 'light' && t !== 'dark') {
     t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   }

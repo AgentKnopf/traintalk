@@ -1,4 +1,4 @@
-app = "trainchat"
+app = "traintalk"
 primary_region = "fra"
 
 [build]
@@ -11,7 +11,7 @@ primary_region = "fra"
   auto_start_machines = true
   min_machines_running = 1
 
-# TrainChat uses in-memory rooms — must run as exactly 1 instance.
+# TrainTalk uses in-memory rooms — must run as exactly 1 instance.
 # Multiple instances would split users across separate room maps.
 [deploy]
   strategy = "immediate"

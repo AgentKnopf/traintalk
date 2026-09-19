@@ -1,10 +1,10 @@
-# TrainChat
+# TrainTalk
 
 Zero-install ephemeral chat for people on the same WiFi network. Open the URL, get a random identity, start chatting. No accounts, no history, no data stored.
 
 ## How it works
 
-- Open `trainchat.app` in any browser — no install, no account
+- Open `traintalk.app` in any browser — no install, no account
 - You're automatically in a room with everyone on the same network
 - Messages exist only in connected browser tabs — close the tab and they're gone
 - Your identity is a random name like "Crimson Penguin" — assigned fresh each session
@@ -20,8 +20,8 @@ Zero-install ephemeral chat for people on the same WiFi network. Open the URL, g
 ## Self-hosting
 
 ```bash
-git clone https://github.com/agent-knopf/trainchat
-cd trainchat
+git clone https://github.com/agent-knopf/traintalk
+cd traintalk
 npm install
 npm start
 ```
@@ -31,8 +31,8 @@ Requires Node.js LTS. For production, set up TLS (Let's Encrypt) — `wss://` is
 ## Development
 
 ```bash
-git clone https://github.com/AgentKnopf/trainchat
-cd trainchat
+git clone https://github.com/AgentKnopf/traintalk
+cd traintalk
 npm install
 npm run dev      # starts server with --watch (auto-restarts on changes)
 ```

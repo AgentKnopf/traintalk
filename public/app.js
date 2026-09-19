@@ -10,7 +10,7 @@ const sendBtn    = document.getElementById('send-btn');
 let myName = null;
 let pendingClaim = false;
 
-const HISTORY_KEY = 'trainchat-messages';
+const HISTORY_KEY = 'traintalk-messages';
 const HISTORY_MAX = 300;
 
 function storeMessage(from, text, ts, isMe) {
@@ -62,7 +62,7 @@ const ws = new WebSocket(`${proto}://${location.host}`);
 ws.addEventListener('open', () => {
   addSystem('Connected — waiting for room info…');
   try {
-    const saved = JSON.parse(sessionStorage.getItem('trainchat-name') ?? 'null');
+    const saved = JSON.parse(sessionStorage.getItem('traintalk-name') ?? 'null');
     if (saved?.name && saved?.token) {
       pendingClaim = true;
       ws.send(JSON.stringify({ type: 'claim', name: saved.name, token: saved.token }));
@@ -93,7 +93,7 @@ ws.addEventListener('message', (event) => {
     if (!pendingClaim) {
       addSystem(`You joined as ${msg.name}`);
       if (msg.token) {
-        sessionStorage.setItem('trainchat-name', JSON.stringify({ name: msg.name, token: msg.token }));
+        sessionStorage.setItem('traintalk-name', JSON.stringify({ name: msg.name, token: msg.token }));
       }
     }
     return;
@@ -107,7 +107,7 @@ ws.addEventListener('message', (event) => {
     updateRoomSize(msg.roomSize);
     reattributeHistory(msg.name);
     addSystem(`You rejoined as ${msg.name}`);
-    sessionStorage.setItem('trainchat-name', JSON.stringify({ name: msg.name, token: msg.token }));
+    sessionStorage.setItem('traintalk-name', JSON.stringify({ name: msg.name, token: msg.token }));
     return;
   }
 
@@ -188,7 +188,7 @@ input.addEventListener('keydown', (e) => {
 // The initial theme is resolved by the inline script in <head> so the first
 // paint is already correct. This only handles switching afterwards.
 
-const THEME_KEY = 'trainchat-theme';
+const THEME_KEY = 'traintalk-theme';
 const themeBtn  = document.getElementById('theme-btn');
 const iconMoon  = document.getElementById('icon-moon');
 const iconSun   = document.getElementById('icon-sun');

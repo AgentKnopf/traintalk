@@ -1,5 +1,5 @@
 {
-  "name": "trainchat",
+  "name": "traintalk",
   "version": "0.1.0",
   "description": "Zero-install ephemeral chat for people on the same WiFi network",
   "type": "module",
