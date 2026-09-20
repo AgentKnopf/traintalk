@@ -16,6 +16,9 @@ primary_region = "fra"
 [deploy]
   strategy = "immediate"
 
+[machines]
+  count = 1
+
   [http_service.concurrency]
     type = "connections"
     hard_limit = 500
